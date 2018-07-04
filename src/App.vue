@@ -1,15 +1,20 @@
 <template>
   <div id="app">
   	<navbar>
-  		<i class="iconfont icon-caidan"></i>
+  		<i class="iconfont icon-caidan" @click="isShow=!isShow"></i>
   	</navbar>
-  	<sidebar></sidebar>
+  	<sidebar :show="isShow" @clickevent="isShow=false"></sidebar>
+  	<section>
+        <router-view></router-view>
+     </section>
+  	<footerbar></footerbar>
   </div>
 </template>
 
 <script>
 import navbar from "./components/common/navbar";
 import sidebar from "./components/common/sidebar";
+import footerbar from "./components/common/footerbar";
 
 export default {
 	data(){
@@ -19,7 +24,8 @@ export default {
 	},
 	components:{
 		navbar,
-		sidebar
+		sidebar,
+		footerbar
 	}
 }
 </script>
@@ -33,4 +39,10 @@ export default {
 html,body{
 	height: 100%;
 }
+ul{
+	list-style: none;
+}
+section{
+    position: relative;
+  }
 </style>

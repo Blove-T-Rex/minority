@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 
-// Vue.use(Router)
+Vue.use(Router)
 
+import Topics from "../components/topics"
 
-
-// export default new Router({
-//   routes: [
+export default new Router({
+  routes: [
 //     {
 //       path: '/login',//登录
 //       component: Login
@@ -16,10 +16,10 @@ import Router from 'vue-router'
 //       path: '/join',//注册
 //       component: Jion
 //     },
-//     {
-//       path: '/topics',//专题广场
-//       component: Topics
-//     },
+	    {
+	      path: '/topics',//专题广场
+	      component: Topics
+	    }
 //     {
 //       path: '/topic/:id',//专题广场的详情页
 //       component: Topic
@@ -45,5 +45,5 @@ import Router from 'vue-router'
 //       component: Tag
 //     },
 
-//   ]
-// })
+  ]
+})
