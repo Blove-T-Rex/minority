@@ -33,8 +33,6 @@
 		padding-bottom: 40px;
 		border-top: 1px solid rgba(0,0,0,.1);
 		border-bottom: 1px solid rgba(0,0,0,.1);
-		position: fixed;
-		bottom: 0;
 		width: 100%;
 		margin:0;
 	}
