@@ -64,11 +64,11 @@
 	}
 	@keyframes bounce-in {
 	  0% {
-	    transform:translateY(-100%);
+	    transform:translateZ(-100%);
 	    opacity: 0;
 	  }
 	  100% {
-	    transform:translateY(0px);
+	    transform:translateZ(0px);
 	    opacity: 1;
 	  }
 	}

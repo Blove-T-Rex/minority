@@ -1,7 +1,11 @@
 <template>
 	<nav>
 		<div class="left">
-			<a href="#"><img src="static/image/logo.png"></a>
+			<a href="/"><img src="static/image/logo.png"></a>
+		</div>
+		<!-- <div class="title">{{changeTitle}}</div> -->
+		<div class="title">
+			<span>{{changeTitle}}</span>
 		</div>
 		<div class="right">
 			<slot></slot>
@@ -11,8 +15,11 @@
 </template>
 
 <script>
+	import {mapState} from "vuex";
 	export default{
-
+		computed:{
+			...mapState(["changeTitle"])
+		}
 	}
 </script>
 
@@ -27,6 +34,7 @@
 		line-height: 50px;
 		color:white;
 		z-index: 10;
+		overflow: hidden;
 	}
 	.left{
 		float: left;
@@ -37,6 +45,21 @@
 	}
 	.right span{
 		padding-left: 14px;
+	}
+	nav .title{
+		font-size: 1.125rem;
+		text-align: center;
+	    color: #fff;
+	    margin: 0;
+	    height: 50px;
+	    line-height: 50px;
+	    font-weight: 400;
+	    position: absolute;
+	    margin-left: 50%;
+		transform: translateX(-50%);
+	}
+	nav .title span{
+		display: inline-block;
 	}
 	nav .left a img{
 		width: 40px;

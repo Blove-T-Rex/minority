@@ -5,9 +5,14 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import Topics from "../components/topics"
-
+import Topic from "../components/topic"
+import Home from "../components/home"
 export default new Router({
   routes: [
+  		{
+  			path:'/',
+  			component:Home
+  		},
 //     {
 //       path: '/login',//登录
 //       component: Login
@@ -19,11 +24,11 @@ export default new Router({
 	    {
 	      path: '/topics',//专题广场
 	      component: Topics
-	    }
-//     {
-//       path: '/topic/:id',//专题广场的详情页
-//       component: Topic
-//     },
+	    },
+	    {
+	      path: '/topic/:id',//专题广场的详情页
+	      component: Topic
+	    },
 //     {
 //       path: '/matrix',//
 //       component: Matrix
@@ -44,6 +49,10 @@ export default new Router({
 //       path: '/tag/:id',//
 //       component: Tag
 //     },
+		{
+			path:'*',
+			redirect:'/'
+		}
 
   ]
 })
