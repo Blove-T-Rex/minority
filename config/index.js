@@ -15,7 +15,13 @@ module.exports = {
             target:'https://sspai.com',
             host:'sspai.com',
             changeOrigin:true
-        }
+        },
+         '/v1': {
+              target: 'https://sspai.com/api',
+              host: 'sspai.com/api',
+              changeOrigin:true,
+          }
+
     },
 
     // Various Dev Server settings

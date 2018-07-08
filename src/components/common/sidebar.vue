@@ -3,13 +3,9 @@
 		<aside v-show="show">
 		<ul @click=handleClick()>
 			<router-link to="/topics" tag="li">专题广场</router-link>
-			<li>Matrix</li>
-			<li>付费栏目</li>
-			<li>效率工具</li>
-			<li>手机摄影</li>
-			<li>生活方式</li>
-			<li>游戏</li>
-			<li>硬件</li>
+			<router-link to="/matrix" tag="li">Matrix</router-link>
+			<li><a href="https://sspai.com/series">付费栏目</a></li>
+			<li v-for="data in list" @click="addRouter(data)">{{data}}</li>
 		</ul>
 		<a class="nav-contact-link">寻求合作 | 支持我们</a>
 	</aside>
@@ -17,11 +13,20 @@
 </template>
 
 <script>
+	import router from "../../router"
 	export default{
+		data() {
+			return {
+				list:["效率工具","手机摄影","生活方式","游戏","硬件"]
+			}
+		},
 		props:["show"],
 		methods:{
 			handleClick(){
 				this.$emit("clickevent");
+			},
+			addRouter(id){
+				router.push(`/tag/${id}`)
 			}
 		}
 	}	

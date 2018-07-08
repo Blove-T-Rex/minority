@@ -226,6 +226,7 @@
 	#detail .article-card dt{
 		position: relative;
 		margin: 0 0 20px;
+		overflow: hidden;
 	}
 	#detail .article-card dt .avatar{
 		float: left;
