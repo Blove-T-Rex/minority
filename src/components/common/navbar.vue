@@ -9,7 +9,7 @@
 		</div>
 		<div class="right">
 			<slot></slot>
-			<span>登录</span>
+			<router-link to="/login" tag="span">登录</router-link>
 		</div>
 	</nav>
 </template>

@@ -16,20 +16,24 @@ import Detail from '../components/detail'
 import Poss from '../components/poss'
 import Updates from '../components/updates'
 import Columns from '../components/columns'
+//-----------------------
+import Login from '../components/login'
+import Join from '../components/join'
+
 export default new Router({
   routes: [
   		{
   			path:'/',
   			component:Home
   		},
-//     {
-//       path: '/login',//登录
-//       component: Login
-//     },
-//     {
-//       path: '/join',//注册
-//       component: Jion
-//     },
+	    {
+	      path: '/login',//登录
+	      component: Login
+	    },
+	    {
+	      path: '/join',//注册
+	      component: Join
+	    },
 	    {
 	      path: '/topics',//专题广场
 	      component: Topics
