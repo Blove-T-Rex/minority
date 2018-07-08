@@ -10,7 +10,24 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/api': {
+            target: 'https://sspai.com',
+            host: 'sspai.com',
+            changeOrigin:true,
+            // pathRewrite: {
+            //     '^/v4/api': '/v4/api'
+            //   }
+        },
+        '/userinfo': {
+            target: 'http://localhost:3000',
+            host: 'localhost:3000',
+            changeOrigin:true,
+            pathRewrite: {
+                '^/userinfo': '/userinfo'
+              }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
