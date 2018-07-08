@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
-  	<navbar></navbar>
-  	<sidebar></sidebar>
+  <div>
+  	
+ 	<section>
+  	<router-view></router-view>
+ 	</section>
+ 
   </div>
 </template>
 
@@ -12,6 +15,13 @@ export default {
 </script>
 
 <style>
-
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	height: 100%;
+	
+}
 
 </style>
